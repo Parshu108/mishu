@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Layout from "./Layout";
+import Matters from "./pages/Matters";
+import Shop from "./pages/Shop";
+import Product from "./pages/Product";
+import Pillow from "./pages/pillow";
+import Showroom from "./pages/showroom";
+import Sleep from "./pages/sleep";
+import Blog from "./pages/Blog";
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+const app=()=>{
+  return(
+  <>
+    <BrowserRouter>
+      <Routes>
+        <Route>
+          <Route path="/" element={<Layout/>}/>
+        <Route path="matter" element={<Matters/>}/>
+        <Route path="shop" element={<Shop/>}/>
+        <Route path="product" element={<Product/>}/>
+        <Route path="pillow" element={<Pillow/>}/>
+        <Route path="showroom" element={<Showroom/>}/>
+        <Route path="sleep" element={<Sleep/>}/>
+        <Route path="blog" element={<Blog/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </>
   )
 }
-
-export default App
+export default app;
