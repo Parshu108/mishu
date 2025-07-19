@@ -14,7 +14,8 @@ const Topheader = () => {
     <>
        <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#" style={{color:`green`,fontSize:`18px`,fontWeight:`600`}}><img src={Svg} style={{width:"150px", height:"60px", fontfamily: "Libre Baskervilleserif"}} ></img></Navbar.Brand>
+        <Navbar.Brand href="#" style={{color:`green`,fontSize:`18px`,fontWeight:`600`}}><img src={Svg} style={{width:"150px", height:"60px", fontfamily: "Libre Baskervilleserif", fontWeight: "400",
+  fontstyle: "italic"}} ></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -31,10 +32,10 @@ const Topheader = () => {
             <Nav.Link href="#action2" as={Link} to="blog" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}}>Blog</Nav.Link>
           </Nav>
           <Form className="d-flex ">
-            <CiSearch />
-            <CiUser />
-            <CiHeart />
-            <CiShoppingCart />
+            <CiSearch style={{fontSize:'24px',}} />
+            <CiUser style={{fontSize:'24px'}}/>
+            <CiHeart style={{fontSize:'24px'}} />
+            <CiShoppingCart style={{fontSize:'24px'}} />
           </Form>
         </Navbar.Collapse>
       </Container>
