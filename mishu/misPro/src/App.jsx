@@ -17,6 +17,7 @@ const app=()=>{
       <Routes>
         <Route>
           <Route path="/" element={<Layout/>}/>
+          {/* <Route index element={<Matters/>}/> */}
         <Route path="matter" element={<Matters/>}/>
         <Route path="shop" element={<Shop/>}/>
         <Route path="product" element={<Product/>}/>

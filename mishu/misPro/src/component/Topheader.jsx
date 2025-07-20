@@ -12,7 +12,7 @@ import Svg from "../image/Logo.png";
 const Topheader = () => {
   return (
     <>
-       <Navbar expand="lg" className="bg-body-tertiary">
+       <Navbar expand="lg" className="bg-body-tertiary headerdata" >
       <Container fluid>
         <Navbar.Brand href="#" style={{color:`green`,fontSize:`18px`,fontWeight:`600`}}><img src={Svg} style={{width:"150px", height:"60px", fontfamily: "Libre Baskervilleserif", fontWeight: "400",
   fontstyle: "italic"}} ></img></Navbar.Brand>
