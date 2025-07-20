@@ -11,3 +11,18 @@
    top: 0;
    z-index: 3;
 }
+#footerdata {
+  /* background-color: #f8f9fa; */
+  top: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #343a40;
+  width: 100%;
+}
+#footerdata-ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  width: 100px;
+}
