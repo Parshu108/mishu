@@ -5,23 +5,24 @@ import { MdOutlineMail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { RiLinkedinFill } from "react-icons/ri";
 
 const footer = () => {
   return (
     <>
       <footer className=" text-red d-block py-3 footerdata">
         <div className="container ">
-          <ul className="list-block ">
+          <ul className="list-block footerdataul">
             <a href="#" className="text-white"><img src={logo} style={{width:"20%",height:"80px" }} /></a>
-            <div style={{marginTop:"10px"}} >
-              <p style={{width:"350px"}}><CiLocationOn />
-              <span style={{marginLeft:"10px",margintop:"10px"}}>Plot no- 911, Alang road, Opposite Pooja Weigh Bridge, Trapaj,
+            <div  >
+              <p style={{width:"50%"}} ><CiLocationOn />
+              <span style={{marginLeft:"20px"}} >Plot no- 911, Alang road, Opposite {``} Pooja Weigh Bridge, Trapaj,
 Bhavnagar, Gujarat 364150</span></p>
             </div>
             <div>
               <p>
               <MdOutlineMail />
-              <span>
+              <span style={{marginLeft:"20px"}}>
                 info@mishumattress.com
               </span>
               </p>
@@ -29,45 +30,29 @@ Bhavnagar, Gujarat 364150</span></p>
             <div>
               <p>
                 <FiPhone />
-                <span>
+                <span style={{marginLeft:"20px"}}>
                 +91 63521 09065
                 </span>
               </p>
             </div>
-            <div>
-              <FiPhone />
+            <div className='icon'>
               <FaFacebookF />
               <FaInstagram />
+              <RiLinkedinFill />
             </div>
           </ul>
-        </div>
-        <div className="container">
-          <ul className="list-inline">
-            <li className="list-inline-item"><a href="#" className="text-white">Home</a></li>
-            <li className="list-inline-item"><a href="#" className="text-white">Twitter</a></li>
-            <li className="list-inline-item"><a href="#" className="text-white">Instagram</a></li>
-          </ul>
-        </div>
-        <div className="container">
-          <ul className="list-inline">
-            <li className="list-inline-item"><a href="#" className="text-white">Facebook</a></li>
-            <li className="list-inline-item"><a href="#" className="text-white">Twitter</a></li>
-            <li className="list-inline-item"><a href="#" className="text-white">Instagram</a></li>
-          </ul>
-        </div>
-        <div className="container">
-          <ul className="list-inline">
-            <li className="list-inline-item"><a href="#" className="text-white">Facebook</a></li>
-            <li className="list-inline-item"><a href="#" className="text-white">Twitter</a></li>
-            <li className="list-inline-item"><a href="#" className="text-white">Instagram</a></li>
-          </ul>
-        </div>
-        <div className="container">
-          <ul className="list-inline">
-            <li className="list-inline-item"><a href="#" className="text-white">Facebook</a></li>
-            <li className="list-inline-item"><a href="#" className="text-white">Twitter</a></li>
-            <li className="list-inline-item"><a href="#" className="text-white">Instagram</a></li>
-          </ul>
+          <div className="miniul">
+            <h5>Help</h5>
+            <div className="under">
+            <ul>
+            <a href="#" >Privacy Policy</a>
+            <a href="#" >Returns + Exchanges</a>
+            <a href="#" >Shipping</a>
+            <a href="#" >Terms & Conditions</a>
+            <a href="#" >FAQ’s</a>
+            </ul>
+            </div>
+          </div>
         </div>
       </footer>
     </>
