@@ -1,5 +1,8 @@
 import { Button } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
+// import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 import m1 from "../image/main/main-grid-01.jpg"
 import m2 from "../image/main/main-grid-02.jpeg";
 import m3 from "../image/main/main-grid-03.jpeg";
@@ -60,22 +63,32 @@ const Matters = () => {
       <div className='bg-div'><h5 className='head'>SUMMER <span>SALE OF</span> TO 50%</h5></div>
       <div className='bg-div'><h5 className='head'>WE SUPPORT <span>24 HOURS</span> A DAY</h5></div>
      </div>
-    
-    <section className='cont'>
-      <div className='div1'>
-        <div className='img-div'>
-          <div className='s-div'><div className='d-head'>Cozy & snug For that plush feel</div></div>
-          <div className='s-div1'><div className='d-head1'> Reversible</div></div>
-        </div>
-        <div className='s-div2'>
-          <div className='b-div1'>  </div>
-          </div>
-        <div>
-          <div><div>Back support</div></div>
-          <div><div>No partner disturbanceoes</div></div>
-        </div>
-      </div>
-    </section>
+
+    <CardGroup>
+      <Card>
+        <Card.Img variant="top" src={m1} style={{width:"80%",height:"100%",marginLeft:"20px"}} />
+        <Card.Body>
+          <Card.Title className='d-head'> Cozy & snug For that plush feel</Card.Title>
+        </Card.Body>
+        <Card.Img variant="top" src={m3} style={{width:"80%",height:"100%",marginLeft:"20px"}} />
+        <Card.Body>
+          <Card.Title className='d-head1'> Reversible</Card.Title>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src={cent} style={{width:"100%",height:"100%"}} />
+      </Card>
+      <Card>
+        <Card.Img variant="top" src={m2} style={{width:"80%",height:"100%",marginLeft:"70px"}} />
+        <Card.Body>
+          <Card.Title className='d-head2'> Back support</Card.Title>
+        </Card.Body>
+        <Card.Img variant="top" src={m4} style={{width:"80%",height:"100%",marginLeft:"70px"}} />
+        <Card.Body>
+          <Card.Title className='d-head3'>No partner disturbanceoes</Card.Title>
+        </Card.Body>
+      </Card>
+    </CardGroup>
     </>
   )
 }
