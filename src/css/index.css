@@ -241,3 +241,7 @@ span{
   border: none;
   transition: all 0.3s ease;
 }
+
+.headnav{
+  color: #f7ae10;
+}

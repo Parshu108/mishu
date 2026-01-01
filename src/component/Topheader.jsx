@@ -1,3 +1,4 @@
+// import from "../css/index.css";
 import { CiSearch } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
@@ -23,13 +24,13 @@ const Topheader = () => {
             style={{ maxHeight: '100px',margin:`auto`,gap:`10px` }}
             navbarScroll
           >
-            <Nav.Link href="#action1" as={Link} to="matter" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} >Matters</Nav.Link>
-            <Nav.Link href="#action2" as={Link} to="shop"  style={{color:`black`,fontSize:`18px`,fontWeight:`600`}}>Shop</Nav.Link>
-            <Nav.Link href="#action2" as={Link} to="product" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}}>Product</Nav.Link>
-            <Nav.Link href="#action2" as={Link} to="pillow" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}}>Pillows</Nav.Link>
-            <Nav.Link href="#action2" as={Link} to="showroom" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}}>Showroom</Nav.Link>
-            <Nav.Link href="#action2" as={Link} to="sleep" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}}>Sleep</Nav.Link>
-            <Nav.Link href="#action2" as={Link} to="blog" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} >Blog</Nav.Link>
+            <Nav.Link href="#action1" as={Link} to="matter" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} className="headnav" >Matters</Nav.Link>
+            <Nav.Link href="#action2" as={Link} to="shop"  style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} className="headnav">Shop</Nav.Link>
+            <Nav.Link href="#action2" as={Link} to="product" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} className="headnav">Product</Nav.Link>
+            <Nav.Link href="#action2" as={Link} to="pillow" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} className="headnav">Pillows</Nav.Link>
+            <Nav.Link href="#action2" as={Link} to="showroom" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} className="headnav">Showroom</Nav.Link>
+            <Nav.Link href="#action2" as={Link} to="sleep" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} className="headnav">Sleep</Nav.Link>
+            <Nav.Link href="#action2" as={Link} to="blog" style={{color:`black`,fontSize:`18px`,fontWeight:`600`}} className="headnav">Blog</Nav.Link>
           </Nav>
           <Form className="d-flex ">
             <CiSearch style={{fontSize:'24px',}}  />

@@ -30,26 +30,17 @@ const Matters = () => {
   const ans=mydata.map((key)=>{
     return (
       <>
-      {/* <Card style={{ width: '20rem' }}>
-      <Card.Img variant="top" src={key.img} />
-      <Card.Body>
-        <Card.Title>{key.name}</Card.Title>
-        <Card.Text style={{fontSize:"15px",color:"black",fontWeight:"500"}}>
-          <RiMoneyRupeeCircleLine style={{fontSize:"15px"}} />:{key.prize}
-        </Card.Text>
-      </Card.Body>
-    </Card> */}
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
-  <img className="w-full" src={key.img} alt="Sunset in the mountains"/>
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2 ">{key.name}</div>
-    <p className="flex gap-2 font-medium text-gray-600 dark:text-gray-400 ">
-      <span><RiMoneyRupeeCircleLine  /></span>
-      <span>:-</span>
-      <span>{key.prize}</span>
-    </p>
-  </div>
-</div>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <img className="w-full" src={key.img} alt="Sunset in the mountains"/>
+         <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2 ">{key.name}</div>
+            <p className="flex gap-2 font-medium text-gray-600 dark:text-gray-400 ">
+              <span><RiMoneyRupeeCircleLine  /></span>
+              <span>:-</span>
+              <span>{key.prize}</span>
+            </p>
+          </div>
+        </div>
       </>
       
     );
@@ -138,23 +129,22 @@ const Matters = () => {
         <p className='text-center w-50'>Best Collection of Comfortable Mattress</p>
       </div>
     </div>
-      <div style={{display:"block",flexWrap:"wrap",justifyContent:"space-around",marginTop:"20px"}}>
-          <div style={{display:"flex",justifyContent:"space-around",marginBottom:"20px",textAlign:"center",width:"50%",marginLeft:"25%"}}>
+      <div  className='block flex-wrap justify-content-around mt-3'>
+          <div  className='flex justify-content-around mb-3 text-center w-50 ml-auto mr-auto'>
             <li className='li-d'><button className='li-d-button'> Best Seller</button></li>
             <li className='li-d'><button className='li-d1-button'>Orth Mattress</button></li>
             <li className='li-d'><button className='li-d1-button'>New Launches</button></li>
           </div>
-        <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-around",marginTop:"20px"}}>
+        <div  className='grid grid-cols-4 gap-4 mt-4 p-4'>
           {ans}
         </div>
       </div>
     </section>
-    <section style={{backgroundColor:"#f8f9fa",padding:"50px 0"}}>
+    <section  className='bg-gray-200 p-4'>
       <div>
-        <div style={{textAlign:"center",marginBottom:"30px",padding:"0 20px",margin:"10px"}}>
-          <h1 style={{fontSize:"30px",fontWeight:"500",color:"#3e5a7cff"}}>Our Premium Mattresses Redefine Sleep Quality</h1>
-          <p style={{textAlign:"center",width:"60%",margin:"0 auto",color:"#2d2d2eff",fontSize:"20px",lineHeight:"1.6",marginTop:"20px"
-          }}>At Mishu, we believe that a good day begins with a great night's sleep. As a premium mattress brand, we are dedicated to redefining sleep quality with products that combine comfort, durability, and innovation. Whether you're looking to upgrade your home bedroom or furnish an entire hotel, our wide range of mattresses caters to every need.</p>
+        <div  className='text-center mb-5 p-4 m-2'>
+          <h1 style={{color:"#3e5a7cff"}} className='fs-1 fw-bold'>Our Premium Mattresses Redefine Sleep Quality</h1>
+          <p  className='text-center w-3xl m-auto fs-5 mt-5 lh-base'>At Mishu, we believe that a good day begins with a great night's sleep. As a premium mattress brand, we are dedicated to redefining sleep quality with products that combine comfort, durability, and innovation. Whether you're looking to upgrade your home bedroom or furnish an entire hotel, our wide range of mattresses caters to every need.</p>
           <button className='s-button'>READ OUR STORY</button>
         </div>
       </div>
