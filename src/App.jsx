@@ -6,6 +6,7 @@ import Product from "./pages/Product";
 import Pillow from "./pages/pillow";
 import Showroom from "./pages/showroom";
 import Sleep from "./pages/sleep";
+import Productdisplay from "./pages/Product";
 import Blog from "./pages/Blog";
 
 
@@ -22,7 +23,8 @@ const app=()=>{
         <Route path="shop" element={<Shop/>}/>
         <Route path="product" element={<Product/>}/>
         <Route path="pillow" element={<Pillow/>}/>
-        <Route path="showroom" element={<Showroom/>}/>
+        <Route path="showroom" element={<Showroom/>}/>        
+        <Route path="productdisplay/:id" element={<Productdisplay/>}/>        
         <Route path="sleep" element={<Sleep/>}/>
         <Route path="blog" element={<Blog/>}/>
         </Route>

@@ -1,5 +1,6 @@
 import { Button } from 'react-bootstrap';
 import { useState,useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 // import Button from 'react-bootstrap/Button';
@@ -18,6 +19,7 @@ import axios from 'axios';
 const Matters = () => {
   // Fetching data from the API
   const [mydata, setdata] = useState([]);
+  const Navigate=useNavigate();
   const loaddata = async () => {
       const api = "http://localhost:3000/product";
       const res = await axios.get(api);
@@ -27,20 +29,28 @@ const Matters = () => {
     loaddata();
   }, []);
 
+  const product=(id)=>{
+    Navigate(`/productdisplay/${id}`);
+  }
+
   const ans=mydata.map((key)=>{
     return (
       <>
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <img className="w-full" src={key.img} alt="Sunset in the mountains"/>
+        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+          <a href="" onClick={()=>product(key.id)}>
+            <img className="aspect-square w-full rounded-lg bg-gray-400 object-cover group-hover:opacity-75 xl:aspect-7/8" src={key.img} alt="Sunset in the mountains"/>
+          </a>
+          
          <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 ">{key.name}</div>
             <p className="flex gap-2 font-medium text-gray-600 dark:text-gray-400 ">
               <span><RiMoneyRupeeCircleLine  /></span>
               <span>:-</span>
-              <span>{key.prize}</span>
+              <span className='mt-1 text-lg font-medium text-gray-900'>{key.prize}</span>
             </p>
           </div>
         </div>
+        
       </>
       
     );
