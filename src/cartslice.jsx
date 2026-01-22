@@ -11,7 +11,7 @@ const cartSlice=createSlice({
             alert("product Added sucessfully");
          }
          else{
-            state.cart.push(actions.payload);
+            state.cart.push({...actions.payload, qnty:1});
          }  
       },
       qntIncrese:(state,actions)=>{

@@ -9,8 +9,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import Svg from "../image/Logo.png";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Topheader = () => {
+  const product=useSelector((state)=>state.mycart.cart);  
+  console.log(product);
+  const navigate=useNavigate();
   return (
     <>
        <Navbar expand="lg" className="bg-body-tertiary headerdata" >
@@ -36,7 +41,9 @@ const Topheader = () => {
             <CiSearch style={{fontSize:'24px',}}  />
             <CiUser style={{fontSize:'24px'}}/>
             <CiHeart style={{fontSize:'24px'}} />
-            <CiShoppingCart style={{fontSize:'24px'}} />
+            <a href="#" onClick={()=>{navigate("/cartdata")}}>
+              <CiShoppingCart style={{fontSize:'24px'}} />
+            </a>
           </Form>
         </Navbar.Collapse>
       </Container>

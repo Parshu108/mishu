@@ -2,8 +2,8 @@ import { Button } from 'react-bootstrap';
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-import { RiMoneyRupeeCircleLine } from "react-icons/ri";
-// import Button from 'react-bootstrap/Button';
+import { useDispatch } from 'react-redux';
+import { addtocard } from '../cartSlice';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import m1 from "../image/main/main-grid-01.jpg"
@@ -14,12 +14,17 @@ import cent from "../image/main/Center-image-grid.png"
 import img1 from "../image/slide/Web-Banner-001.png";
 import img2 from "../image/slide/Web-Banner-002.png";
 import img3 from "../image/slide/Web-Banner-003.png";
+// import img4 from "../image/logo/avatar-01.jpg";
+// import img5 from "../image/logo/avatar-02.jpg";
+// import img6 from "../image/logo/coustomer-02.jpg";
 import axios from 'axios';
+
 
 const Matters = () => {
   // Fetching data from the API
   const [mydata, setdata] = useState([]);
   const Navigate=useNavigate();
+  const dispatch=useDispatch();
   const loaddata = async () => {
       const api = "http://localhost:3000/product";
       const res = await axios.get(api);
@@ -43,11 +48,21 @@ const Matters = () => {
           
          <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 ">{key.name}</div>
-            <p className="flex gap-2 font-medium text-gray-600 dark:text-gray-400 ">
-              <span><RiMoneyRupeeCircleLine  /></span>
-              <span>:-</span>
-              <span className='mt-1 text-lg font-medium text-gray-900'>{key.prize}</span>
+            <p className="flex gap-2 fs-4 text-orange-600 dark:text-orange-400 ">
+              <h5>Price:-</h5>
+              <h5> {key.prize}</h5>
             </p>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={()=>{dispatch(addtocard({
+              id:key.id,
+              name:key.name,
+              img:key.img,
+              prize:key.prize,
+            }))
+            }}
+           >
+            Add to Cart
+            </button>
           </div>
         </div>
         
@@ -159,6 +174,104 @@ const Matters = () => {
         </div>
       </div>
     </section>
+
+    <section className="pt-6">
+  <div className="max-w-6xl mx-auto px-4">
+    {/* Heading */}
+    <div className="flex justify-center">
+      <div className="w-full lg:w-7/12">
+        <div className="text-center">
+          <div className="mb-2">
+            <h1 className="text-3xl font-semibold">Happy Customers</h1>
+          </div>
+          <span className="text-sm uppercase tracking-normal text-gray-500">
+            Real, happy sleepers with real 5-star reviews.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    {/* Quotes */}
+    <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
+      {/* Card 1 */}
+      <div className="border rounded-lg p-6 bg-white">
+        <p className="text-gray-500 text-sm">
+          Love my new mattress! It's so cozy and inviting, I never want to get
+          out of bed. It's made my nights so much more relaxing.
+        </p>
+
+        <div className="flex items-center gap-3 mt-6 pt-2">
+          <img
+            src="https://www.shutterstock.com/image-photo/indoor-photo-smiling-young-handsome-260nw-2624493687.jpg"
+            alt=""
+            className="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <h6 className="text-sm font-semibold uppercase mb-0">
+              Mr. Suresh
+            </h6>
+            <p className="text-gray-500 text-sm mb-1">Verified Buyer</p>
+            <div className="text-yellow-500 text-sm">
+              ⭐⭐⭐⭐⭐
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 2 */}
+      <div className="border rounded-lg p-6 bg-white">
+        <p className="text-gray-500 text-sm">
+          This mattress is perfect! It gives just the right amount of support
+          without being too firm. I wake up feeling refreshed every.
+        </p>
+
+        <div className="flex items-center gap-3 mt-6 pt-2">
+          <img
+            src="https://www.myperfectresume.com/wp-content/uploads/2020/09/define-excellent-customer-service.jpg?w=550"
+            alt=""
+            className="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <h6 className="text-sm font-semibold uppercase mb-0">
+              Mr. Ganesh
+            </h6>
+            <p className="text-gray-500 text-sm mb-1">Verified Buyer</p>
+            <div className="text-yellow-500 text-sm">
+              ⭐⭐⭐⭐⭐
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 3 */}
+      <div className="border rounded-lg p-6 bg-white">
+        <p className="text-gray-500 text-sm">
+          My mattress from Mishu Mattress is incredibly comfortable! It's like
+          sleeping on a cloud. Best sleep I've had in ages!
+        </p>
+
+        <div className="flex items-center gap-3 mt-6 pt-2">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2n4-Sx5q59DZTNUM_JjCk48hgm93HM1Ze-Q&s"
+            alt=""
+            className="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <h6 className="text-sm font-semibold uppercase mb-0">
+              Mr. Ramesh Singh
+            </h6>
+            <p className="text-gray-500 text-sm mb-1">Verified Buyer</p>
+            <div className="text-yellow-500 text-sm">
+              ⭐⭐⭐⭐⭐
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     </>
   )
 }

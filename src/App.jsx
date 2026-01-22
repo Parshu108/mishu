@@ -8,6 +8,11 @@ import Showroom from "./pages/showroom";
 import Sleep from "./pages/sleep";
 import Productdisplay from "./pages/Product";
 import Blog from "./pages/Blog";
+import Cartdata from "./pages/cartdata";
+import Checkout from "./pages/checkout";
+import OrderComplete from "./pages/ordercomplete";
+
+
 
 
 
@@ -24,9 +29,12 @@ const app=()=>{
         <Route path="product" element={<Product/>}/>
         <Route path="pillow" element={<Pillow/>}/>
         <Route path="showroom" element={<Showroom/>}/>        
-        <Route path="productdisplay/:id" element={<Productdisplay/>}/>        
+        <Route path="productdisplay/:id" element={<Productdisplay/>}/>
+        <Route path="cartdata" element={<Cartdata/>}/> 
+         <Route path="ordercomplete" element={<OrderComplete/>}/>
         <Route path="sleep" element={<Sleep/>}/>
         <Route path="blog" element={<Blog/>}/>
+        <Route path="checkout" element={<Checkout/>}  />
         </Route>
       </Routes>
     </BrowserRouter>
