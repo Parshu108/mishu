@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useState } from 'react';
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-indigo-600 to-purple-700 text-white items-center justify-center p-10">
         <div className="max-w-md space-y-6 text-center">
           <h1 className="text-4xl font-bold">Welcome Back 👋</h1>
-          <p className="opacity-90">
+          <p className="opacity-90 text-2xl">
             Build modern apps faster with React + Tailwind. 
             Clean UI, secure authentication, and smooth user experience.
           </p>
