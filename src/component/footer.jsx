@@ -115,10 +115,10 @@ const footer = () => {
 
                 <form action="#" method="POST" >
                     <div>
-                        <input type="email" name="email" id="email" placeholder="Enter your email"  />
+                        <input type="email" name="email" id="email" placeholder="Enter your email" className="border-1 p-1 w-75  " />
                         
                     </div>
-                    <button type="submit" id="btn" >Subscribe</button>
+                    <button type="submit" id="btn" className="p-2 bg-yellow-600 m-3 rounded-2 " >Subscribe</button>
                 </form>
             </div>
         </div>

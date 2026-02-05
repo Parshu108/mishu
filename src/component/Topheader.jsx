@@ -39,7 +39,9 @@ const Topheader = () => {
           </Nav>
           <Form className="d-flex ">
             <CiSearch style={{fontSize:'24px',}}  />
-            <CiUser style={{fontSize:'24px'}}/>
+           <a href="/login">
+             <CiUser style={{fontSize:'24px'}} />
+           </a>
             <CiHeart style={{fontSize:'24px'}} />
             <a href="#" onClick={()=>{navigate("/cartdata")}}>
               <CiShoppingCart style={{fontSize:'24px'}} />

@@ -53,7 +53,7 @@
   ],
   "costomber": [
     {
-      "id": 1,
+      "id": "1",
       "fullname": "",
       "phone": "",
       "email": "",
@@ -145,6 +145,40 @@
         }
       ],
       "totalamount": 12600
+    },
+    {
+      "id": "0961",
+      "products": [
+        {
+          "id": "2",
+          "name": "Dream Catcher Mattress",
+          "img": "../src/image/shop/Dream-Catcher-Mattress.png",
+          "prize": 6480,
+          "qnty": 1
+        }
+      ],
+      "totalamount": 6480
+    },
+    {
+      "id": "ce98",
+      "products": [
+        {
+          "id": "2",
+          "name": "Dream Catcher Mattress",
+          "img": "../src/image/shop/Dream-Catcher-Mattress.png",
+          "prize": 6480,
+          "qnty": 1
+        }
+      ],
+      "totalamount": 6480,
+      "payment": "cod",
+      "fullname": "PRASHURAM KUMAR Sahani",
+      "phone": "09122539824",
+      "email": "prashuramsahanivictory@gmail.com",
+      "address": "45 purwasa nagar ashima mall bhopal madhya pradesh\n45 purwasa nagar ashima mall bhopal madhya",
+      "city": "Bhopal",
+      "state": "Madhya Pradesh",
+      "pincode": "462026"
     }
   ]
 }

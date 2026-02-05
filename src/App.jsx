@@ -5,7 +5,7 @@ import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import Pillow from "./pages/pillow";
 import Showroom from "./pages/showroom";
-import Sleep from "./pages/sleep";
+import Login from "./pages/login";
 import Productdisplay from "./pages/Product";
 import Blog from "./pages/Blog";
 import Cartdata from "./pages/cartdata";
@@ -32,7 +32,7 @@ const app=()=>{
         <Route path="productdisplay/:id" element={<Productdisplay/>}/>
         <Route path="cartdata" element={<Cartdata/>}/> 
          <Route path="ordercomplete" element={<OrderComplete/>}/>
-        <Route path="sleep" element={<Sleep/>}/>
+        <Route path="login" element={<Login/>}/>
         <Route path="blog" element={<Blog/>}/>
         <Route path="checkout" element={<Checkout/>}  />
         </Route>
