@@ -30,15 +30,26 @@ const Matters = () => {
   const ans=mydata.map((key)=>{
     return (
       <>
-      <Card style={{ width: '20rem' }}>
+      {/* <Card style={{ width: '20rem' }}>
       <Card.Img variant="top" src={key.img} />
       <Card.Body>
         <Card.Title>{key.name}</Card.Title>
         <Card.Text style={{fontSize:"15px",color:"black",fontWeight:"500"}}>
-          <RiMoneyRupeeCircleLine style={{fontSize:"18px"}} />:{key.prize}
+          <RiMoneyRupeeCircleLine style={{fontSize:"15px"}} />:{key.prize}
         </Card.Text>
       </Card.Body>
-    </Card>
+    </Card> */}
+    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+  <img className="w-full" src={key.img} alt="Sunset in the mountains"/>
+  <div className="px-6 py-4">
+    <div className="font-bold text-xl mb-2 ">{key.name}</div>
+    <p className="flex gap-2 font-medium text-gray-600 dark:text-gray-400 ">
+      <span><RiMoneyRupeeCircleLine  /></span>
+      <span>:-</span>
+      <span>{key.prize}</span>
+    </p>
+  </div>
+</div>
       </>
       
     );

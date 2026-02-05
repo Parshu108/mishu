@@ -7,22 +7,22 @@
       "img": "../src/image/shop/astron-mattress.png"
       },
       {
-      "id": "1",
+      "id": "2",
       "name": "Dream Catcher Mattress",
       "prize": 6480,
       "img": "../src/image/shop/Dream-Catcher-Mattress.png"
       },
       {
-      "id": "1",
+      "id": "3",
       "name": "Ortho Mattress",
       "prize": 6120,
       "img": "../src/image/shop/Ortho-Pro.png"
     },
     {
-      "id": "1",
+      "id": "4",
       "name": "Vintage Mattress",
       "prize": 9900,
       "img": "../src/image/shop/Vintage-Pro.png"
-    }   
+    }
 ]
 }
