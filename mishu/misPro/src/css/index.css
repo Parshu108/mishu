@@ -103,13 +103,15 @@
 #btn {
   width: 22%;
   height: 50px;
-  margin-top: 10px;
+  margin-left: auto;
   background-color: #f7ae10;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
   cursor: pointer;
+  position: sticky ;
+  top: 0;
+  z-index: 3;
+
 }
 .para {
   text-align: center;
@@ -240,4 +242,28 @@ span{
   color: white;
   border: none;
   transition: all 0.3s ease;
+}
+
+.headnav{
+  color: #f7ae10;
+}
+
+.data{
+  color: #343a40;
+}
+
+
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  gap: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
 }
